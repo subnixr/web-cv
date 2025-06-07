@@ -1,4 +1,5 @@
-import '@/styles/globals.css';
+import '@/styles/global.css';
+import clsx from 'clsx';
 
 import { Geist, Geist_Mono } from 'next/font/google';
 
@@ -20,7 +21,14 @@ export default function Layout({
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+                className={clsx(
+                    `${geistSans.variable} ${geistMono.variable}`,
+                    'bg-wallpaper text-fg typo-body',
+                    'mx-auto max-w-[1024px]',
+                    'shadow-500',
+                    'relative',
+                    'transition',
+                )}
             >
                 {children}
                 <script async src="/easteregg.js" />

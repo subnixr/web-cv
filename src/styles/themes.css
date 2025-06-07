@@ -1,0 +1,28 @@
+:root {
+    --theme-color-primary: #2e822e;
+    --theme-color-wallpaper: #afafaf;
+    --theme-color-wallpaper2: #efefef;
+    --theme-color-bg: #ffffff;
+    --theme-color-fg: #000000;
+    --theme-color-fgAlt: #ffffff;
+    --theme-color-border: #afafaf;
+
+    --theme-color-shadow: #00000059;
+    --theme-color-modal-backdrop: #000000ae;
+
+    --theme-font-base: var(--font-face-overpass);
+    --theme-font-alt: var(--font-face-hermit);
+
+    --theme-round-full: 100%;
+    --theme-font-mono: var(--font-face-hermit);
+}
+
+html[data-theme='dark'] {
+    --theme-color-primary: #2e822e;
+    --theme-color-wallpaper: #101010;
+    --theme-color-wallpaper2: #101010;
+    --theme-color-bg: #202020;
+    --theme-color-fg: #ffffff;
+    --theme-color-fgAlt: #ffffff;
+    --theme-color-border: #afafaf;
+}

@@ -1,0 +1,56 @@
+@layers theme, base, components, utilities;
+
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/preflight.css' layer(base);
+@import 'tailwindcss/utilities.css' layer(utilities);
+
+@import './themes.css';
+@import './typography.css';
+@import './icons.css';
+
+@theme inline {
+    --color-primary: var(--theme-color-primary);
+    --color-wallpaper: var(--theme-color-wallpaper);
+    --color-wallpaper2: var(--theme-color-wallpaper2);
+    --color-bg: var(--theme-color-bg);
+    --color-fg: var(--theme-color-fg);
+    --color-fgAlt: var(--theme-color-fgAlt);
+    --color-border: var(--theme-color-border);
+
+    --color-shadow: var(--theme-color-shadow);
+    --color-modal-backdrop: var(--theme-color-modal-backdrop);
+
+    --spacing-100: 0.4rem;
+    --spacing-200: 0.8rem;
+    --spacing-300: 1.6rem;
+    --spacing-400: 3.2rem;
+    --spacing-500: 6.4rem;
+
+    --shadow-500: 0 0.4rem 0.8rem var(--theme-color-shadow);
+    --shadow-550: 0 0.4rem 0.8rem var(--theme-color-modal-backdrop);
+
+    --z-index-timeline-title: 400;
+    --z-index-header: 500;
+    --z-index-modal: 600;
+}
+
+:root {
+    font-size: 62.5%;
+}
+
+body {
+    @apply text-[1.6rem] antialiased;
+}
+
+@utility scroll-lock {
+    overflow: hidden;
+    height: 100%;
+}
+
+@utility col-count-* {
+    column-count: --value(integer);
+}
+
+@utility scroll-margin-top {
+    scroll-margin-top: 8.3rem;
+}

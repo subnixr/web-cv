@@ -1,7 +1,12 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  /* config options here */
+    // SSG for static hosting
+    output: 'export',
+    images: {
+        unoptimized: true,
+    },
+    // end of SSG export options
 };
 
 export default nextConfig;

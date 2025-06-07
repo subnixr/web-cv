@@ -1,0 +1,16 @@
+{
+    "section": {
+        "education": "Educación",
+        "experiences": "Experiencias",
+        "skills": "Skills"
+    },
+    "hardSkills": "Habilidades técnicas",
+    "hobbies": "Pasantiempos + Proyectos",
+    "languages": "Idiomas",
+    "softSkills": "Habilidades blandas",
+    "now": "Actual",
+    "lastUpdate": "Última actualización:",
+    "backToTop": "Volver arriba",
+    "mostRecent": "Más reciente",
+    "leastRecent": "Menos reciente"
+}

@@ -1,0 +1,14 @@
+FILE,PATH,COMMENT,it,en,es
+/common.json,helloWorld,HelloWorld,Ciao Mondo,Hello World,Hola Mundo
+/timeline.json,section.education,Education,Education,Education,Educación
+/timeline.json,section.experiences,Experiences,Experiences,Experiences,Experiencias
+/timeline.json,section.skills,Skills,Skills,Skills,Skills
+/timeline.json,hardSkills,Hard Skills,Hard Skills,Hard Skills,Habilidades técnicas
+/timeline.json,hobbies,Hobbies + Projects,Hobbies + Projects,Hobbies + Projects,Pasantiempos + Proyectos
+/timeline.json,languages,Languages,Languages,Languages,Idiomas
+/timeline.json,softSkills,Soft Skills,Soft Skills,Soft Skills,Habilidades blandas
+/timeline.json,now,Current,Attuale,Current,Actual
+/timeline.json,lastUpdate,Last update,Ultimo aggiornamento:,Last update:,Última actualización:
+/timeline.json,backToTop,Back to top,Torna all'inizio,Back to top,Volver arriba
+/timeline.json,mostRecent,Most recent,Più recente,Most recent,Más reciente
+/timeline.json,leastRecent,Least recent,Meno recente,Least recent,Menos reciente

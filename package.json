@@ -7,7 +7,10 @@
         "dev": "next dev --turbopack",
         "build": "next build",
         "start": "next start",
-        "lint": "next lint && tsc --noEmit"
+        "lint": "next lint && tsc --noEmit",
+        "csvt:export": "csvt -l it,en,es export src/langs",
+        "csvt:update": "csvt update src/langs",
+        "csvt:import": "csvt import src/langs"
     },
     "dependencies": {
         "clsx": "^2.1.1",
@@ -27,6 +30,7 @@
         "@types/react-dom": "^19",
         "@typescript-eslint/eslint-plugin": "^8.34.1",
         "@typescript-eslint/parser": "^8.34.1",
+        "csvt": "^0.1.4",
         "eslint": "^9.29.0",
         "eslint-config-next": "15.3.3",
         "js-yaml": "^4.1.0",

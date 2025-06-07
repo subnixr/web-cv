@@ -1,28 +1,63 @@
+import { IconContainer } from '@/components/base/Icon';
 import '@/styles/global.css';
+
 import clsx from 'clsx';
+import { Overpass } from 'next/font/google';
+import localFont from 'next/font/local';
+import { ReactNode } from 'react';
 
-import { Geist, Geist_Mono } from 'next/font/google';
-
-const geistSans = Geist({
-    variable: '--font-geist-sans',
+const overpass = Overpass({
     subsets: ['latin'],
+    variable: '--font-face-overpass',
+    display: 'swap',
 });
 
-const geistMono = Geist_Mono({
-    variable: '--font-geist-mono',
-    subsets: ['latin'],
+const hermit = localFont({
+    src: [
+        {
+            path: '../fonts/Hermit/Hermit-Regular.otf',
+            weight: '400',
+            style: 'normal',
+        },
+        {
+            path: '../fonts/Hermit/Hermit-RegularItalic.otf',
+            weight: '400',
+            style: 'italic',
+        },
+        {
+            path: '../fonts/Hermit/Hermit-Light.otf',
+            weight: '200',
+            style: 'normal',
+        },
+        {
+            path: '../fonts/Hermit/Hermit-LightItalic.otf',
+            weight: '200',
+            style: 'italic',
+        },
+        {
+            path: '../fonts/Hermit/Hermit-Bold.otf',
+            weight: '600',
+            style: 'normal',
+        },
+        {
+            path: '../fonts/Hermit/Hermit-BoldItalic.otf',
+            weight: '600',
+            style: 'italic',
+        },
+    ],
+    variable: '--font-face-hermit',
+    display: 'swap',
 });
 
 export default function Layout({
     children,
 }: Readonly<{
-    children: React.ReactNode;
+    children: ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html className={`${hermit.variable} ${overpass.variable}`}>
             <body
                 className={clsx(
-                    `${geistSans.variable} ${geistMono.variable}`,
                     'bg-wallpaper text-fg typo-body',
                     'mx-auto max-w-[1024px]',
                     'shadow-500',
@@ -31,6 +66,7 @@ export default function Layout({
                 )}
             >
                 {children}
+                <IconContainer />
                 <script async src="/easteregg.js" />
             </body>
         </html>

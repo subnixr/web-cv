@@ -54,3 +54,5 @@ body {
 @utility scroll-margin-top {
     scroll-margin-top: 8.3rem;
 }
+
+@import './components/cta.css';

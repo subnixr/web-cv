@@ -1,4 +1,9 @@
 import Icon from '@/components/base/Icon';
+import { Card } from '@/components/Card';
+import Cta from '@/components/Cta';
+import FlagLink from '@/components/FlagLink';
+import IconCta from '@/components/IconCta';
+import List from '@/components/List';
 import { fileExists, readCV } from '@/utils/cv';
 import { LOCALES } from '@/utils/i18n/config';
 import { initI18N, readTranslations } from '@/utils/i18n/server';
@@ -45,6 +50,26 @@ export default async function Page({ params }: PageProps) {
             {t('common.helloWorld')}
             {cv.profile.name}
             <Icon type="sun" className="icon-300 inline-block" />
+            <Card small label="label">
+                <List ordered>
+                    <List.Item marker="A">
+                        <Cta href="#">cta</Cta>
+                    </List.Item>
+                    <List.Item>
+                        <Cta href="">cta (no link)</Cta>
+                    </List.Item>
+                    <List.Item>
+                        <IconCta
+                            iconClassName="icon-300"
+                            href="#"
+                            type="moon"
+                        />
+                    </List.Item>
+                    <List.Item>
+                        <FlagLink href="#" type="flag-it" />
+                    </List.Item>
+                </List>
+            </Card>
         </div>
     );
 }

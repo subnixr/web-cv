@@ -1,14 +1,16 @@
-import Icon from '@/components/base/Icon';
 import { Card } from '@/components/Card';
 import Cta from '@/components/Cta';
-import FlagLink from '@/components/FlagLink';
-import IconCta from '@/components/IconCta';
 import List from '@/components/List';
 import { fileExists, readCV } from '@/utils/cv';
 import { LOCALES } from '@/utils/i18n/config';
 import { initI18N, readTranslations } from '@/utils/i18n/server';
+import BackToTop from './ui/BackToTop';
 import CVHeader from './ui/CVHeader';
 import CVLayout from './ui/CVLayout';
+import LanguagesTable from './ui/LanguagesTable';
+import LastUpdated from './ui/LastUpdated';
+import ListCard from './ui/ListCard';
+import Timeline, { TimelineSection } from './ui/Timeline';
 
 export async function generateStaticParams() {
     const res = await Promise.all(
@@ -52,31 +54,66 @@ export default async function Page({ params }: PageProps) {
             className="bg-wallpaper2"
             header={<CVHeader profile={cv.profile} />}
         >
-            <div>
-                {t('common.helloWorld')}
-                {cv.profile.name}
-                <Icon type="sun" className="icon-300 inline-block" />
-                <Card small label="label">
-                    <List ordered>
-                        <List.Item marker="A">
-                            <Cta href="#">cta</Cta>
-                        </List.Item>
-                        <List.Item>
-                            <Cta href="">cta (no link)</Cta>
-                        </List.Item>
-                        <List.Item>
-                            <IconCta
-                                iconClassName="icon-300"
-                                href="#"
-                                type="moon"
+            <Timeline>
+                <TimelineSection section="skills">
+                    <div className="skills">
+                        <ListCard
+                            grid
+                            label={t('timeline.hardSkills')}
+                            className="skills__hard"
+                        >
+                            {cv.skills.hard.map(({ label, rank }) => (
+                                <List.Item
+                                    key={label}
+                                    marker={rank}
+                                    className="items-start"
+                                >
+                                    {label}
+                                </List.Item>
+                            ))}
+                        </ListCard>
+                        <Card
+                            small
+                            label={t('timeline.languages')}
+                            className="skills__lang h-full"
+                        >
+                            <LanguagesTable
+                                languages={cv.languages ?? []}
+                                currentLanguage={locale}
                             />
-                        </List.Item>
-                        <List.Item>
-                            <FlagLink href="#" type="flag-it" />
-                        </List.Item>
-                    </List>
-                </Card>
-            </div>
+                        </Card>
+                        <ListCard
+                            label={t('timeline.softSkills')}
+                            className="skills__soft"
+                        >
+                            {cv.skills.soft.map(({ label }) => (
+                                <List.Item key={label} className="items-start">
+                                    {label}
+                                </List.Item>
+                            ))}
+                        </ListCard>
+                        <ListCard
+                            label={t('timeline.hobbies')}
+                            className="skills__proj"
+                        >
+                            {cv.skills.hobbies.map(({ label, url }) => (
+                                <List.Item key={label} className="items-start">
+                                    {!url ? (
+                                        label
+                                    ) : (
+                                        <Cta href={url}>{label}</Cta>
+                                    )}
+                                </List.Item>
+                            ))}
+                        </ListCard>
+                    </div>
+                </TimelineSection>
+                <LastUpdated
+                    label={t('timeline.lastUpdate')}
+                    date={new Date()}
+                />
+                <BackToTop />
+            </Timeline>
         </CVLayout>
     );
 }

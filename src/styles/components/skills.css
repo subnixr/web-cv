@@ -1,0 +1,32 @@
+.skills {
+    @apply grid grid-cols-2 place-items-stretch gap-400 max-lg:grid-cols-1;
+    grid-template-areas:
+        'hard lang'
+        'soft proj';
+}
+
+.skills__hard {
+    grid-area: hard;
+}
+
+.skills__lang {
+    grid-area: lang;
+}
+
+.skills__soft {
+    grid-area: soft;
+}
+
+.skills__proj {
+    grid-area: proj;
+}
+
+@media screen and (max-width: 1023px) {
+    .skills {
+        grid-template-areas:
+            'hard'
+            'soft'
+            'lang'
+            'proj';
+    }
+}

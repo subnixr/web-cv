@@ -7,6 +7,8 @@ import List from '@/components/List';
 import { fileExists, readCV } from '@/utils/cv';
 import { LOCALES } from '@/utils/i18n/config';
 import { initI18N, readTranslations } from '@/utils/i18n/server';
+import CVHeader from './ui/CVHeader';
+import CVLayout from './ui/CVLayout';
 
 export async function generateStaticParams() {
     const res = await Promise.all(
@@ -46,30 +48,35 @@ export default async function Page({ params }: PageProps) {
     const t = initI18N(translations, locale);
 
     return (
-        <div>
-            {t('common.helloWorld')}
-            {cv.profile.name}
-            <Icon type="sun" className="icon-300 inline-block" />
-            <Card small label="label">
-                <List ordered>
-                    <List.Item marker="A">
-                        <Cta href="#">cta</Cta>
-                    </List.Item>
-                    <List.Item>
-                        <Cta href="">cta (no link)</Cta>
-                    </List.Item>
-                    <List.Item>
-                        <IconCta
-                            iconClassName="icon-300"
-                            href="#"
-                            type="moon"
-                        />
-                    </List.Item>
-                    <List.Item>
-                        <FlagLink href="#" type="flag-it" />
-                    </List.Item>
-                </List>
-            </Card>
-        </div>
+        <CVLayout
+            className="bg-wallpaper2"
+            header={<CVHeader profile={cv.profile} />}
+        >
+            <div>
+                {t('common.helloWorld')}
+                {cv.profile.name}
+                <Icon type="sun" className="icon-300 inline-block" />
+                <Card small label="label">
+                    <List ordered>
+                        <List.Item marker="A">
+                            <Cta href="#">cta</Cta>
+                        </List.Item>
+                        <List.Item>
+                            <Cta href="">cta (no link)</Cta>
+                        </List.Item>
+                        <List.Item>
+                            <IconCta
+                                iconClassName="icon-300"
+                                href="#"
+                                type="moon"
+                            />
+                        </List.Item>
+                        <List.Item>
+                            <FlagLink href="#" type="flag-it" />
+                        </List.Item>
+                    </List>
+                </Card>
+            </div>
+        </CVLayout>
     );
 }

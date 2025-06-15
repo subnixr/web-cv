@@ -1,0 +1,33 @@
+@layer components {
+    .rich-text a {
+        @apply appearance-none outline-none;
+        @apply text-primary font-[700];
+    }
+
+    .rich-text a:hover,
+    .rich-text a:focus {
+        @apply underline;
+    }
+
+    .rich-text ul li,
+    .rich-text ol li {
+        @apply p-100;
+    }
+
+    .rich-text ul li:before,
+    .rich-text ol li:before {
+        content: '';
+        @apply flex-[0_0_auto];
+        @apply inline-block h-[.6rem] w-[.6rem];
+        @apply bg-fg mr-200 rounded-full;
+        @apply mb-[.3rem];
+    }
+
+    .rich-text * + p {
+        @apply mt-200;
+    }
+
+    .rich-text em {
+        @apply text-primary mr-100 font-mono font-[700] not-italic;
+    }
+}

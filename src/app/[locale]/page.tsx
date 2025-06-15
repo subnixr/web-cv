@@ -5,6 +5,7 @@ import { fileExists, readCV } from '@/utils/cv';
 import { LOCALES } from '@/utils/i18n/config';
 import { initI18N, readTranslations } from '@/utils/i18n/server';
 import BackToTop from './ui/BackToTop';
+import CVExperiences from './ui/CVExperiences';
 import CVHeader from './ui/CVHeader';
 import CVLayout from './ui/CVLayout';
 import LanguagesTable from './ui/LanguagesTable';
@@ -108,6 +109,16 @@ export default async function Page({ params }: PageProps) {
                         </ListCard>
                     </div>
                 </TimelineSection>
+                <CVExperiences
+                    section="experiences"
+                    title={t('timeline.section.experiences')}
+                    experiences={cv.experiences ?? []}
+                />
+                <CVExperiences
+                    section="education"
+                    title={t('timeline.section.education')}
+                    experiences={cv.education ?? []}
+                />
                 <LastUpdated
                     label={t('timeline.lastUpdate')}
                     date={new Date()}

@@ -1,5 +1,6 @@
 'use client';
 
+import useMultiIntersectionObserver from '@/components/base/useMultiIntersectionObserver';
 import { WithChildren, WithClassName } from '@/utils/components';
 import clsx from 'clsx';
 import { ReactNode } from 'react';
@@ -46,9 +47,11 @@ export function TimelineSection({
     children,
     ...props
 }: TimelineSectionProps) {
+    const [, { observe }] = useMultiIntersectionObserver();
     return (
         <section
             {...props}
+            ref={elem => observe(elem as Element)}
             className={clsx('max-md:scroll-margin-top', className)}
             id={section}
         >

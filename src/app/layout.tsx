@@ -1,6 +1,7 @@
-import { IconContainer } from '@/components/base/Icon';
 import '@/styles/global.css';
 
+import { IconContainer } from '@/components/base/Icon';
+import { MultiIntersectionObserverProvider } from '@/components/base/useMultiIntersectionObserver';
 import clsx from 'clsx';
 import { Overpass } from 'next/font/google';
 import localFont from 'next/font/local';
@@ -49,13 +50,14 @@ const hermit = localFont({
     display: 'swap',
 });
 
-export default function Layout({
-    children,
-}: Readonly<{
-    children: ReactNode;
-}>) {
+export default async function Layout({ children }: { children: ReactNode }) {
+    const theme = 'light';
+
     return (
-        <html className={`${hermit.variable} ${overpass.variable}`}>
+        <html
+            data-theme={theme}
+            className={`${hermit.variable} ${overpass.variable}`}
+        >
             <body
                 className={clsx(
                     'bg-wallpaper text-fg typo-body',
@@ -65,7 +67,11 @@ export default function Layout({
                     'transition',
                 )}
             >
-                {children}
+                <MultiIntersectionObserverProvider
+                    options={{ rootMargin: '0px 0px 0px 0px' }}
+                >
+                    {children}
+                </MultiIntersectionObserverProvider>
                 <IconContainer />
                 <script async src="/easteregg.js" />
             </body>

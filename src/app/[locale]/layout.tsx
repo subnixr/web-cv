@@ -2,6 +2,7 @@ import { I18NProvider } from '@/utils/i18n';
 import { LOCALES } from '@/utils/i18n/config';
 import { readTranslations } from '@/utils/i18n/server';
 import { ReactNode } from 'react';
+import { CVContextProvider } from './ui/useCVState';
 
 export default async function Layout({
     children,
@@ -17,7 +18,7 @@ export default async function Layout({
     return (
         <>
             <I18NProvider translations={translations} lang={locale}>
-                {children}
+                <CVContextProvider>{children}</CVContextProvider>
             </I18NProvider>
         </>
     );

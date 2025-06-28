@@ -1,7 +1,9 @@
 import '@/styles/global.css';
 
 import { IconContainer } from '@/components/base/Icon';
+import { ModalPortalRoot } from '@/components/base/Modal';
 import { MultiIntersectionObserverProvider } from '@/components/base/useMultiIntersectionObserver';
+import { ThemeProvider } from '@/components/base/useTheme';
 import clsx from 'clsx';
 import { Overpass } from 'next/font/google';
 import localFont from 'next/font/local';
@@ -58,6 +60,16 @@ export default async function Layout({ children }: { children: ReactNode }) {
             data-theme={theme}
             className={`${hermit.variable} ${overpass.variable}`}
         >
+            <head>
+                {/* prettier-ignore */}
+                <script>
+                    {/* debugger */}
+                    {/* const saved = localStorage.getItem('theme');
+                    const preferred = matchMedia('prefers-color-scheme:dark').matches ? 'dark' : 'light';
+                    document.documentElement.dataset.theme = saved || preferred;
+                    localStorage.setItem('theme', saved || preferred) */}
+                </script>
+            </head>
             <body
                 className={clsx(
                     'bg-wallpaper text-fg typo-body',
@@ -70,10 +82,12 @@ export default async function Layout({ children }: { children: ReactNode }) {
                 <MultiIntersectionObserverProvider
                     options={{ rootMargin: '0px 0px 0px 0px' }}
                 >
-                    {children}
+                    <ThemeProvider>{children}</ThemeProvider>
                 </MultiIntersectionObserverProvider>
                 <IconContainer />
+                <ModalPortalRoot />
                 <script async src="/easteregg.js" />
+                {/* <script>debugger</script> */}
             </body>
         </html>
     );

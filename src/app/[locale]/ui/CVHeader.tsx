@@ -1,11 +1,14 @@
 'use client';
 
+import Modal from '@/components/base/Modal';
 import useScrollDown from '@/components/base/useScrollDown';
 import { WithClassName } from '@/utils/components';
 import { Profile } from '@/utils/cv';
 import clsx from 'clsx';
+import { useEffect, useState } from 'react';
 import IconCta from '../../../components/IconCta';
 import CVNav from './CVNav';
+import CVSettings from './CVSettings';
 import ProfilePicture from './ProfilePicture';
 
 export type HeaderProps = WithClassName<{
@@ -18,6 +21,12 @@ export default function CVHeader({
     ...props
 }: HeaderProps) {
     const scrollDown = useScrollDown();
+    const [modalOpen, setModalOpen] = useState(false);
+    useEffect(() => {
+        window.addEventListener('resize', () => {
+            setModalOpen(false);
+        });
+    }, []);
 
     return (
         <header
@@ -62,7 +71,7 @@ export default function CVHeader({
                             className="cta"
                             iconClassName="icon-400 max-md:icon-350"
                             type="menu"
-                            onClick={() => {}}
+                            onClick={() => setModalOpen(true)}
                         />
                     </div>
                 </div>
@@ -99,6 +108,23 @@ export default function CVHeader({
                 </div>
 
                 <CVNav className="col-start-2 mt-400 max-md:hidden" />
+                <CVSettings className="col-span-2 mt-400 max-md:hidden" />
+
+                <Modal
+                    className={clsx(
+                        'h-[32rem] w-[32rem]',
+                        'flex flex-col gap-200 p-300',
+                    )}
+                    backdropClassName="md:hidden"
+                    open={modalOpen}
+                    onClose={() => setModalOpen(false)}
+                    footer={<CVSettings className="flex-1" />}
+                >
+                    <CVNav
+                        className="flex-1 justify-center self-center pt-200"
+                        onClick={() => setModalOpen(false)}
+                    />
+                </Modal>
             </div>
         </header>
     );

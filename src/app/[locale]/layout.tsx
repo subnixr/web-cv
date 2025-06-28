@@ -4,7 +4,7 @@ import { readTranslations } from '@/utils/i18n/server';
 import { ReactNode } from 'react';
 import { CVContextProvider } from './ui/useCVState';
 
-export default async function Layout({
+export default async function LocaleLayout({
     children,
     params,
 }: Readonly<{

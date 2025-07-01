@@ -61,7 +61,7 @@ export default function CVHeader({
                         type="linkedin"
                     />
                     <IconCta
-                        href={profile.linkedin}
+                        href={profile.github}
                         iconClassName="icon-400 max-md:icon-350"
                         type="github"
                     />

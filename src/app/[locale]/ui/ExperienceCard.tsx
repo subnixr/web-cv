@@ -62,7 +62,7 @@ export default function ExperienceCard({
                 {(linkedin || entity || location) && (
                     <div className="flex-1 gap-100">
                         {(linkedin || entity) && (
-                            <div className="mb-300 flex flex-row items-end gap-200">
+                            <div className="mb-300 flex flex-row items-start gap-200">
                                 {linkedin && (
                                     <IconCta
                                         className="icon-300 flex-[0_0_auto]"
@@ -72,7 +72,7 @@ export default function ExperienceCard({
                                 )}
                                 {entity && (
                                     <Cta className="mr-auto" href={url ?? ''}>
-                                        <span className="typo-title">
+                                        <span className="typo-title text-left">
                                             {entity}
                                         </span>
                                     </Cta>

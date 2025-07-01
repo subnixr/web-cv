@@ -10,7 +10,9 @@
     "softSkills": "Soft Skills",
     "now": "Current",
     "lastUpdate": "Last update",
-    "backToTop": "Back to top",
+    "footer": {
+        "back": "Back to top"
+    },
     "mostRecent": "Most recent",
     "leastRecent": "Least recent"
 }

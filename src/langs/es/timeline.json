@@ -10,7 +10,9 @@
     "softSkills": "Habilidades blandas",
     "now": "Actual",
     "lastUpdate": "Última actualización:",
-    "backToTop": "Volver arriba",
+    "footer": {
+        "back": "Volver arriba"
+    },
     "mostRecent": "Más reciente",
     "leastRecent": "Menos reciente"
 }

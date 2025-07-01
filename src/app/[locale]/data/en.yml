@@ -147,7 +147,7 @@ education:
       thumbnail: /images/company/hensemberger.png
       thumbnailAlt: Hensemberger
       title: Industrial Technician Expert in Computer Science
-      entity: ITIS P.Hensemberger
+      entity: ITIS P. Hensemberger
       location: 'Monza, Italy'
       description: |
           <p>
@@ -242,7 +242,7 @@ experiences:
     - startDate: '2011'
       endDate: '2013'
       role: Volunteer Teacher
-      entity: ITIS P.Hensemberger
+      entity: ITIS P. Hensemberger
       location: 'Monza, Italy'
       url: https://www.hensemberger.edu.it
       linkedin: https://www.linkedin.com/school/hensemberger/

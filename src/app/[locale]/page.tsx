@@ -4,8 +4,8 @@ import List from '@/components/List';
 import { fileExists, readCV } from '@/utils/cv';
 import { LOCALES } from '@/utils/i18n/config';
 import { initI18N, readTranslations } from '@/utils/i18n/server';
-import BackToTop from './ui/BackToTop';
 import CVExperiences from './ui/CVExperiences';
+import CVFooter from './ui/CVFooter';
 import CVHeader from './ui/CVHeader';
 import CVLayout from './ui/CVLayout';
 import LanguagesTable from './ui/LanguagesTable';
@@ -123,7 +123,7 @@ export default async function Page({ params }: PageProps) {
                     label={t('timeline.lastUpdate')}
                     date={new Date()}
                 />
-                <BackToTop />
+                <CVFooter />
             </Timeline>
         </CVLayout>
     );

@@ -17,7 +17,7 @@ export default function RootPage() {
             ? requested
             : DEFAULTLOCALE;
 
-        // router.replace(`/${locale}`);
+        router.replace(`/${locale}`);
     }, [router]);
 
     return (

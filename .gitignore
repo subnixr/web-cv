@@ -16,6 +16,8 @@
 # next.js
 /.next/
 /out/
+/subnixr.github.io/
+!/subnixr.github.io/.nojekyll
 
 # production
 /build

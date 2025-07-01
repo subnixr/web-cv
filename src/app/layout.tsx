@@ -4,6 +4,7 @@ import { IconContainer } from '@/components/base/Icon';
 import { ModalPortalRoot } from '@/components/base/Modal';
 import { MultiIntersectionObserverProvider } from '@/components/base/useMultiIntersectionObserver';
 import { ThemeProvider } from '@/components/base/useTheme';
+import { readCV } from '@/utils/cv';
 import clsx from 'clsx';
 import { Overpass } from 'next/font/google';
 import localFont from 'next/font/local';
@@ -51,6 +52,11 @@ const hermit = localFont({
     variable: '--font-face-hermit',
     display: 'swap',
 });
+
+export async function generateMetadata() {
+    const data = await readCV(`src/app/[locale]/data/en.yml`);
+    return { ...data.seo };
+}
 
 export default async function Layout({ children }: { children: ReactNode }) {
     const theme = 'light';

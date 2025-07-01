@@ -2,7 +2,7 @@ seo:
     title: CV de Roberto Mariani
     author: Roberto Mariani
     description: Currículum Vitae de Roberto Mariani
-    opengraph:
+    openGraph:
         title: CV de Roberto Mariani
         type: profile
         image: '/images/profile.png'

@@ -35,7 +35,9 @@ export default function CVFooter() {
                     Next.js
                 </a>
                 , source available on{' '}
-                <a href="https://github.com/subnixr/web-cv">Github</a>
+                <a href="https://github.com/subnixr/web-cv" target="_blank">
+                    Github
+                </a>
             </div>
         </div>
     );

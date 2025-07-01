@@ -2,7 +2,7 @@ seo:
     title: Roberto Mariani's Portfolio
     author: Roberto Mariani
     description: Roberto Mariani Curriculum Vitae
-    opengraph:
+    openGraph:
         title: Roberto Mariani's Portfolio
         type: profile
         image: '/images/profile.png'

@@ -19,7 +19,7 @@ export type SEO = {
     author: string;
     description: string;
     keywords: string[];
-    opengraph: {
+    openGraph: {
         title: string;
         type: string;
         image: string;

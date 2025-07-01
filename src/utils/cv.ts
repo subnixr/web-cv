@@ -22,7 +22,7 @@ export type SEO = {
     openGraph: {
         title: string;
         type: string;
-        image: string;
+        images: string;
     };
 };
 

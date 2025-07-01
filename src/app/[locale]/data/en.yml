@@ -5,7 +5,7 @@ seo:
     openGraph:
         title: Roberto Mariani's Portfolio
         type: profile
-        image: '/images/profile.png'
+        images: '/images/profile.png'
     keywords:
         - Mariani
         - Roberto

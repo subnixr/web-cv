@@ -21,6 +21,12 @@
     grid-area: proj;
 }
 
+.skills__proj .cta {
+    @apply text-primary hover:text-primary focus:text-primary;
+    @apply hover:border-b-primary focus:border-b-primary;
+    @apply font-[600];
+}
+
 @media screen and (max-width: 1023px) {
     .skills {
         grid-template-areas:

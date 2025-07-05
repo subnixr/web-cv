@@ -41,7 +41,6 @@ export function ThemeProvider({ children }) {
         (theme: Theme) => {
             document.documentElement.dataset.theme = theme;
             localStorage.setItem('theme', theme);
-            console.log('wrote theme', theme);
             _setTheme(theme);
         },
         [_setTheme],

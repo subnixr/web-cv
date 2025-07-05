@@ -26,8 +26,8 @@ export default function CVNav({ className, onClick }: NavProps) {
                                 'flex items-center',
                                 'font-alt text-500 uppercase',
                                 'appearance-none outline-none',
-                                'hover:font-bold',
-                                'focus:font-bold',
+                                'hover:text-primary hover:font-bold',
+                                'focus:text-primary focus:font-bold',
                                 {
                                     'font-bold': current === section,
                                 },

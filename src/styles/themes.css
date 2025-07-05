@@ -5,7 +5,7 @@
     --theme-color-bg: #ffffff;
     --theme-color-fg: #000000;
     --theme-color-fgAlt: #ffffff;
-    --theme-color-border: #afafaf;
+    --theme-color-border: #777777;
 
     --theme-color-shadow: #00000059;
     --theme-color-modal-backdrop: #000000ae;
@@ -19,10 +19,10 @@
 
 html[data-theme='dark'] {
     --theme-color-primary: #2e822e;
-    --theme-color-wallpaper: #101010;
+    --theme-color-wallpaper: #000000;
     --theme-color-wallpaper2: #101010;
     --theme-color-bg: #202020;
     --theme-color-fg: #ffffff;
     --theme-color-fgAlt: #ffffff;
-    --theme-color-border: #afafaf;
+    --theme-color-border: #777777;
 }

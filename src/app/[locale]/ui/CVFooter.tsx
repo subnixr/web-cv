@@ -34,12 +34,13 @@ export default function CVFooter() {
             <div className="font-base text-fg select-none">
                 {t('timeline.footer.back')}
             </div>
-            <div className="font-base text-fg rich-text mt-200">
-                Made with{' '}
+            <div className="font-base text-fg rich-text mt-400 text-center">
+                {t('timeline.footer.madeWith')}{' '}
                 <a href="https://nextjs.org/" target="_blank">
                     Next.js
                 </a>
-                , source available on{' '}
+                {' / '}
+                {t('timeline.footer.sourceAvailableOn')}{' '}
                 <a href="https://github.com/subnixr/web-cv" target="_blank">
                     Github
                 </a>

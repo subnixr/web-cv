@@ -11,7 +11,9 @@
     "now": "Attuale",
     "lastUpdate": "Ultimo aggiornamento:",
     "footer": {
-        "back": "Torna all'inizio"
+        "back": "Torna all'inizio",
+        "madeWith": "Realizzato con",
+        "sourceAvailableOn": "Sorgente disponibile su"
     },
     "mostRecent": "Più recente",
     "leastRecent": "Meno recente"

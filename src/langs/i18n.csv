@@ -9,5 +9,7 @@ FILE,PATH,COMMENT,it,en,es
 /timeline.json,now,Current,Attuale,Current,Actual
 /timeline.json,lastUpdate,Last update,Ultimo aggiornamento:,Last update:,Última actualización:
 /timeline.json,footer.back,Back to top,Torna all'inizio,Back to top,Volver arriba
+/timeline.json,footer.madeWith,Made with,Realizzato con,Made with,Hecho con
+/timeline.json,footer.sourceAvailableOn,Source available on,Sorgente disponibile su,Source available on,Codigo fuente disponible en
 /timeline.json,mostRecent,Most recent,Più recente,Most recent,Más reciente
 /timeline.json,leastRecent,Least recent,Meno recente,Least recent,Menos reciente

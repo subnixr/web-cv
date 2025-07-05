@@ -42,7 +42,7 @@ export default function ExperienceCard({
             <div
                 className={clsx(
                     'flex flex-row gap-200',
-                    'mb-200 pb-200',
+                    'mb-300 pb-300',
                     'border-b-border border-b-[.1rem]',
                 )}
             >
@@ -70,13 +70,18 @@ export default function ExperienceCard({
                                         type="linkedin"
                                     />
                                 )}
-                                {entity && (
-                                    <Cta className="mr-auto" href={url ?? ''}>
-                                        <span className="typo-title text-left">
+                                {entity &&
+                                    (url ? (
+                                        <Cta className="mr-auto" href={url}>
+                                            <span className="typo-title text-left">
+                                                {entity}
+                                            </span>
+                                        </Cta>
+                                    ) : (
+                                        <span className="typo-title mr-auto text-left">
                                             {entity}
                                         </span>
-                                    </Cta>
-                                )}
+                                    ))}
                             </div>
                         )}
                         <div className="typo-subtitle mb-200">{role}</div>

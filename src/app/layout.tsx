@@ -55,7 +55,10 @@ const hermit = localFont({
 
 export async function generateMetadata() {
     const data = await readCV(`src/app/[locale]/data/en.yml`);
-    return { ...data.seo };
+    return {
+        metadataBase: new URL(process.env.APP_URL ?? ''),
+        ...data.seo,
+    };
 }
 
 export default async function Layout({ children }: { children: ReactNode }) {
@@ -86,7 +89,7 @@ export default async function Layout({ children }: { children: ReactNode }) {
                 )}
             >
                 <MultiIntersectionObserverProvider
-                    options={{ rootMargin: '0px 0px 0px 0px' }}
+                    options={{ rootMargin: '-47px 0px 0px 0px' }}
                 >
                     <ThemeProvider>{children}</ThemeProvider>
                 </MultiIntersectionObserverProvider>

@@ -29,6 +29,7 @@ export async function generateMetadata({ params }) {
     const { locale } = await params;
     const data = await readCV(`src/app/[locale]/data/${locale}.yml`);
     return {
+        metadataBase: new URL(process.env.APP_URL ?? ''),
         ...data.seo,
         lang: locale,
     };

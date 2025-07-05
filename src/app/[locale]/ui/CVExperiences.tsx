@@ -28,7 +28,7 @@ export default function CVExperiences({
     className,
     ...props
 }: ExperienceProps) {
-    const [{ sorting }, { setSorting }] = useCVState();
+    const [{ sorting }, { setSorting, setCurrent }] = useCVState();
 
     const sorted = useMemo(
         () =>
@@ -42,7 +42,7 @@ export default function CVExperiences({
 
     const handleSortChange = (v: SortOrder) => {
         setSorting(section, v);
-        scrollToSection(section ?? '');
+        scrollToSection(section ?? '').then(() => setCurrent(section));
     };
 
     return (

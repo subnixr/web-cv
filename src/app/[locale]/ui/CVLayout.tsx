@@ -47,9 +47,11 @@ export default function CVLayout({
     const handleSortChange = useCallback(
         (v: SortOrder) => {
             setSorting(current, v);
-            scrollToSection(current);
+            scrollToSection(current).then(() => {
+                setCurrent(current);
+            });
         },
-        [current, setSorting],
+        [current, setSorting, setCurrent],
     );
 
     return (

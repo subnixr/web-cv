@@ -4,9 +4,12 @@ import Icon from '@/components/base/Icon';
 import useI18N from '@/utils/i18n';
 import clsx from 'clsx';
 import scrollToSection from './scrollToSection';
+import useCVState from './useCVState';
 
 export default function CVFooter() {
     const t = useI18N();
+
+    const [, { setCurrent }] = useCVState();
 
     return (
         <div
@@ -22,7 +25,9 @@ export default function CVFooter() {
                     'cursor-pointer',
                     'hover:text-primary focus:text-primary',
                 )}
-                onClick={() => scrollToSection('skills')}
+                onClick={() =>
+                    scrollToSection('skills').then(() => setCurrent('skills'))
+                }
             >
                 <Icon className="icon-400" type="arrow-up" />
             </button>

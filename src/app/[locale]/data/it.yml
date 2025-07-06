@@ -39,7 +39,7 @@ profile:
 languages:
     - { name: it, listen: '*', speak: '*', read: '*', write: '*' }
     - { name: en, listen: C1, speak: C1, read: C1, write: C1 }
-    - { name: es, listen: A2, speak: A2, read: B1, write: A1 }
+    - { name: es, listen: B1, speak: B1, read: B1, write: B1 }
 
 skills:
     hard:

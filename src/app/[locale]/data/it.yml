@@ -85,7 +85,9 @@ skills:
         - label: Office Suite
 
     hobbies:
-        - label: DJ
+        - label: Mauro Brianza DJ
+          url: https://youtube.com/@MauroBrianzaDJ
+        - label: Senisa DJ
           url: https://youtube.com/@SenisaDJ
         - label: Kickboxer
         - label: Escursionista

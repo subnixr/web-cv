@@ -84,7 +84,9 @@ skills:
         - label: Office365
 
     hobbies:
-        - label: DJ
+        - label: Mauro Brianza DJ
+          url: https://youtube.com/@MauroBrianzaDJ
+        - label: Senisa DJ
           url: https://youtube.com/@SenisaDJ
         - label: Kickboxer
         - label: Senderista

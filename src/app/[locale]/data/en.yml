@@ -84,7 +84,9 @@ skills:
         - label: Office Suite
 
     hobbies:
-        - label: DJ
+        - label: Mauro Brianza DJ
+          url: https://youtube.com/@MauroBrianzaDJ
+        - label: Senisa DJ
           url: https://youtube.com/@SenisaDJ
         - label: Kickboxer
         - label: Hiker
@@ -173,7 +175,7 @@ experiences:
             (<a href="https://www.npmjs.com/package/uuuf" target="_blank">uuuf</a>,
             <a href="https://www.npmjs.com/package/csvt" target="_blank">csvt</a>)
           </li>
-          <li>Development of internal technical training courses
+          <li>Development of internal technical training courses</li>
           </ul>
 
     - startDate: 2018-10

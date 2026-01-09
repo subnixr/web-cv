@@ -65,7 +65,8 @@ export default function ExperienceCard({
                             <div className="mb-300 flex flex-row items-start gap-200">
                                 {linkedin && (
                                     <IconCta
-                                        className="icon-300 flex-[0_0_auto]"
+                                        className="flex-[0_0_auto]"
+                                        iconClassName="icon-300"
                                         href={linkedin}
                                         type="linkedin"
                                     />

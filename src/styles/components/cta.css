@@ -13,7 +13,7 @@
         @apply border-b-fg border-b-[.1rem];
     }
     
-    svg {
+    svg.icon {
         display: inline-block;
     }
 }

@@ -31,7 +31,7 @@ export default function Cta({
             {children}
             {!noIcon && href && (
                 <Icon
-                    className="h-[1.6rem] w-[1.6rem] flex-[0_0_auto] outline-none"
+                    className="icon h-[1.6rem] w-[1.6rem] flex-[0_0_auto] outline-none"
                     type="external-link"
                 />
             )}

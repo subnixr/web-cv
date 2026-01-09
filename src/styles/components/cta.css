@@ -3,7 +3,7 @@
         @apply outline-none;
         @apply appearance-none;
         @apply typo-cta;
-        @apply inline-flex items-center gap-100;
+        @apply inline-block items-center gap-100;
         @apply border-[.1rem] border-transparent;
     }
 
@@ -11,5 +11,9 @@
     .cta:focus {
         @apply font-bold;
         @apply border-b-fg border-b-[.1rem];
+    }
+    
+    svg {
+        display: inline-block;
     }
 }

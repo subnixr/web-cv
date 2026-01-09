@@ -24,6 +24,7 @@ seo:
         - uuuf
         - next
         - next.js
+        - mixxx
 
 profile:
     name: Roberto Mariani
@@ -82,7 +83,6 @@ skills:
         - label: Self improvement
         - label: UI design
         - label: Full Remote
-        - label: Office Suite
 
     hobbies:
         - label: Mauro Brianza DJ
@@ -103,6 +103,8 @@ skills:
           url: https://github.com/subnixr/LittleGPTracker
         - label: webcv
           url: https://github.com/subnixr/web-cv
+        - label: mixxx smart crates
+          url: https://github.com/subnixr/mixxx-smart-crates
 
 education:
     - startDate: '2019'

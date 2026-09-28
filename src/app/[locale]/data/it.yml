@@ -93,10 +93,10 @@ skills:
         - label: Escursionista
         - label: Arch Linux user
         - label: CLI junkie
+        - label: DOOM PSP
+          url: https://github.com/subnixr/DOOMPSP
         - label: uuuf
           url: https://www.npmjs.com/package/uuuf
-        - label: csvt
-          url: https://www.npmjs.com/package/csvt
         - label: minimal
           url: https://github.com/subnixr/minimal
         - label: lgpt
